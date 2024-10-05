@@ -1,0 +1,15 @@
+h1{ /*h1 is a selector tag here.*/
+    color: red; /*color property is used for foreground, not for background. */
+    background-color: black;
+    
+}
+
+p{
+    color: rebeccapurple;
+    background-color: coral;
+}
+
+button{
+    color: #00ffff; /*Hex Code:#rrggbb*/
+    background-color: gray;
+}
