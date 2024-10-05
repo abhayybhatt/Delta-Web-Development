@@ -1,0 +1,25 @@
+/* Inheritance in CSS: jab parent element ko koi css property dete hai, wo uske child elements(jo uske andar aa rhe hai) mein bhi chali jaati  hai.
+Sabse pehle child koshish karega ki uske parent ki property ko inherit kare. agr uske parent ki koi specific property set nhi hai to fir wo grandparent ki property pe check marenga, aur uski property inherit kr lega. 
+Note: Input boxes, bydefault, don't inherit the properites of parent element. lekin agr fir bhi inherit karwana hai to 3rd css ki query check karo. Same thing goes for button as well.*/
+
+div{
+    background-color: yellow;
+}
+form{
+    background-color: red;
+}
+input{
+    background-color: inherit;
+}
+button{
+    background-color: inherit;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/* Tip: if you're not sure which color combination will look good in your webpage, just go online and google color pallete. there are some websites like canva, coolors and colorspace that will automatically suggest you great color combinations, based on your choice! */
+
+/* note: there are some properties like: height, width, border etc. that are NOT inherited by default. */

@@ -1,0 +1,134 @@
+*{ /*Universal selector: applies the specified css properties on all the elements in an html document, not generally used as we need to apply different styles to different elements in an html webpage to make it look prettier.*/
+    font-family: cursive;
+}
+
+h3{
+    background-color: aliceblue !important; /*!important has the highest priority*/
+}
+
+/* Element selector:*/
+h1,h3{ /*can use commas to provide same properties to more than one element!*/
+    color: #b92b27;
+}
+
+/* ID selectors: used to provide css properties to a particular element tag, instead of providing to all the tags of that element in the document, sirf ek button mein property apply hogi, instead of all button elements. must provide id attribute in that umique element in which we have to apply css properties.*/
+/*begin with #:*/
+#login{
+    color: white;
+}
+#signUp{/*id is case-sensitive*/
+    color: white;
+    background-color: #b92b27;
+}
+/*class selectors: used to provide css properties to a group of elements that have same class attribute values. It gets applied to all the elements having that same class, irrespective of their types.
+begin with . */
+.upvote{
+    background-color: teal;
+    color: aliceblue;
+}
+/*to provide green color to paragraphs present inside div element that has id="myid": */
+#myid p{
+    color: green;
+}
+/*Descendent selector: provides css properties to an element that is the descendent(jo uske andar aata hai) of another element.*/
+nav ul li a{/*providing css properties to anchor tag elements that come inside nav->ul->li->a.*/
+    color: hotpink;
+}
+
+/* for providing purple colour to all the anchor tags that are inside paragraph tags, we use: */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+/* Adjacent sibling combinator: for providing css properties for the elements that come immediately after any give element tag, which are on the same level in the html document. jaise ki p tag ke baad h3 tag aa rha hai aur h3 tag aur p tag same level pr hai, arthaat wo siblings hai! To use adjacent sibling combinator, + symbol is used between both siblings.*/
+p+h3{
+    text-decoration: underline;
+}
+.upvote+button{ /*upvote class wale button ka sibling button kaunsa hai? -> answer button.*/
+    background-color: cyan;
+    color: black;
+}
+
+/* child combinator: css properties for tags that are immediate, direct descendant of an element. Similar to descendant selector, but descendant selector is better. use > symbol in between parent and child element.*/
+div>input{
+    background-color: salmon;
+}
+/* Attribute selector: Selects elements based on the presence, or the value of a given attribute. */
+/* based on value: */
+input[type=text]{
+    color: green;
+}
+input[type=password]{
+    color: red;
+}
+/* based on presence: */
+input[type]{ /*jaha bhi input ke andar type attribute hai(jo ki hamesha hi hunda si!), waha pr css property maar do.*/
+    background-color: ghostwhite;
+}
+
+/* Remember this rule: Priority of css selectors: id>class>element. to agr koisa aisa element hai jiske andar ye teeno hi hai aur teeno mein css maari hai, to jo id wale css selector mein css hai, wahi accept hogi, at the end. */
+
+/* if there are different selectors, jo ki same element ke same attribute ki property set kr rhe hai, then we'll play number game: _,_,_. which are respective number blocks of : id, class, and element, respectively. agr koisa descendant selector hai jaise ki div p, to ismein 2 elements hai, to uska score hai 002. aise hi, agr koisa class selector hai jaise ki .para, to isko likhenge: 010. aise hi agar koi simple element selector hota, to usmein 1 element: 001. So here, among these three, class selector has highest value, i.e, 10. To jo property class selector mein hai, wahi accept hogi, at the end. This number game is called Specificity in CSS. */
+
+/* kya hoga agr number game ke baad bhi do ya teen cheezo ki value hi same aa gyi to? -> In that case, remember jo bhi sabse last mein hogi, yaani sabse latest jisne bhi change maara hoga uski property mein, wo jeet jayegi. */
+
+/* psuedo class:A Keyword added to a selector that specifies a special state of the selected element(s). Types: hover, active, checked, nth of type, etc.
+pseudo-class is a keyword added to a selector that specifies a special state of the selected
+element(s). For example, the pseudo-class •z_hQ.y.e.c can be used to select a button when a user's
+pointer hovers over the button and this selected button can then be styled. */
+/* hover:jab cursor us specific element pr le jayenge to kya change laana hai uski css properties mein. */
+button:hover{
+    background-color: black;
+    color: white;
+}
+button:active{ /*jab button daba denge to usse kya change aana chahiye uski css properties mein.*/
+    background-color: cornflowerblue;
+    color: black;
+}
+input[type=radio]:checked+label{ /* checked works for things like radio and checkboxes. example: jab input type radio ke equal ho, to uske sibling, yaani immediate element mein ye css properties lag jaye: */
+    font-weight: bold;
+    color: red;
+}
+
+/* nth-of-type(): used to select nth element in a sequence, it could be odd or even.
+The :nth-of-type() CSS pseudo-class matches elements based on their position among siblings of
+the same type (tag name). */
+div:nth-child(2n){
+    background-color: wheat;
+}
+/* Pseudo Elements:A Keyword added to a selector that lets you style a specific part of the selected element(s). Examples include: ::first-letter, ::first-line, ::selection, etc.  */
+h1::first-letter{
+    color: black;
+}
+p::first-line{
+    color: purple;
+}
+p::selection{
+    background-color: cornflowerblue;
+}
+
+/* What is cascade in CSS?
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values
+for CSS properties. Only Applies for same element(same selector). */
+h3{
+    background-color: red;
+}
+h3{
+    background-color: aquamarine;
+}
+
+/* What is specificity?
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. */
+/* What to remember? */
+/* 1. Selector specificity order: inline style>id>class,attribute and pseudo class>element and pseudo element */
+/* 2. more selectors > less selectors */
+/* 3. if specificity is same -> check cascading property */
+/* Inline Specificity: Inline styles are more specific than id. jo direct styles apan html document mein daalte hai wo hoti hai inline style. Rarely used. */
+
+/* !important:To show the most specific thing in document. Rarely used but it has even higher priority than inline style. to jab !important lag gya to bas usi ki css properties follow hongi.Highest priority. */
+
+
+
+
+
