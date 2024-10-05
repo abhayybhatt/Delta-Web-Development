@@ -1,0 +1,24 @@
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: cornflowerblue;
+}
+.one{
+    background-color: aquamarine;
+    position: relative;
+    z-index: 2;
+}
+.two{
+    background-color: darksalmon;
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+}
+
+/* z-index
+It decides the stack level of elements
+Overlapping elements with a larger z-index cover those with a smaller one. It only works on position of elements set to the value other than default and static.
+z-index : auto (O); bydefault value of all elements.
+z-index : 1/2/ ...;
+z-index : -1/-2/ ...; */

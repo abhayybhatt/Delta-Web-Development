@@ -1,0 +1,78 @@
+#container{
+    width: 600px;
+    height: 300px;
+    background-color: crimson;
+    display: inline-grid;
+    /* agr kabhi grid ko as an inline grid set karana hai to use display: inline-grid; */
+    /* grid-template-rows: 50px 50px 50px 50px; /*4 rows*/
+    /* grid-template-columns: 100px 100px 100px; 3 columns */ 
+    grid-template-rows: repeat(4, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr; /*same as above line*/
+    /* row-gap: 10px;
+    column-gap: 30px;  */
+    /* Grid Gaps
+    They define the gaps between the lines */
+    /* shorthand: use grid-gap: row-gap column-gap .
+    update: grid-gap property is obsolete now, use gap property instead.*/
+    gap: 10px 30px;
+    /* agr single value likhenge to wo dono row aur column gap pr set ho jayegi */
+    justify-items: center;/*for horizontal arrangement of all items in a cell.*/
+    align-items: center; /*for vertical arrangement of all items in a cell.*/
+    place-items: center; /*agr dono ki arrangement value same rakhni hai toh.*/
+
+}
+
+.item{
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+
+}
+
+/* 
+CSS Grid:
+Setting a container's display to grid will make all children grid items. Similar to flexbox, flexbox works in 1D but grid works in 2D!
+However, in practical cases flexbox is more used than grid. Grid has specific use cases.
+#container {
+display : grid;
+} */
+
+/* Grid Cell: made 2 rows and column lines(Grid lines) intersecting each other, jisse dabba ban jayenga!
+Grid Track: do lines ke beech ka distance. Items to hamesha dabbe ke andar  hi place honge. */
+
+/* Grid Template
+They define the lines & track sizing. Kitni grid lines aani chahiye aur track ka kitna size hona chahiye.
+grid-template-rows: do lines(L1 and L2) ke beech mein row-wise kitna distance hai use set krne ke liye. No. of lines = no. of tracks + 1 
+grid-template-columns: for columns.*/
+/* Repeat is used to divide all available space
+grid-template-rows : repeat(count, 1fr). 1 fr means 1 fraction of 100% width(available space). count ki jagah jitne apan ko tracks chahiye(no. of rows in this case) wo apan count mein likh dete hai */
+
+/* Grid Columns
+Defines an item's starting & ending position inside the column
+grid-column-start : line—number
+grid-column-end : line_number
+grid-column : start_col / end_col
+grid-column : start_col / span number */
+#one{
+    /* grid-column-start: 1;
+    grid-column-end: 3; second column tak ka cell pura occupt kr lega. */
+    /* grid-column: 1/3; */
+    grid-column: 1/span 2; /*same as above line. line no.1 se shuru karo aur 2 column tak span(faila) kr do.*/
+    justify-self: end; /*for horizontal arrangement of a specific item in a cell*/
+    align-self:end; /*for horizontal arrangement of a specific item in a cell*/
+    place-self: center; /*agr dono ki arrangement value same rakhni hai toh.*/
+}
+
+/* Grid Rows
+Defines an item's starting & ending position inside the row. self explanatory.
+grid-row-start : line_number
+grid-row-end : line—number
+grid-row : start—row/ end—row
+grid-row : start—row/ span number */
+#two{
+    grid-row: 1/ span 3;
+}
+

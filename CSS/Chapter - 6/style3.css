@@ -1,0 +1,47 @@
+/* Media Queries: helps in creating responsive websites with change in features of different devices like width.
+media features - width (of viewport, yaani jitna part visible hai.)
+@media (width : 400px) (
+div (
+background-color : red;
+}*/
+h1{
+    background-color: yellow;
+    border: 2px solid black;
+}
+@media (width:400px){ /*jab device ki width 400px ho jaye tab heading ka colour yellow se red mein change ho jayenga*/
+    h1{
+        background-color: red;
+        color: whitesmoke;
+    }
+    div{ /*div tab hi dikhai dega jab width 400px ho jayegi*/
+        height: 100px;
+        width: 100px;
+        background-color: burlywood;
+    }
+}
+@media (min-width: 700px) { /*jaise hi width 700px hui, uske baad background color aquamarine ho jayenga*/
+    h1{
+        background-color: aquamarine;
+    }
+}
+@media (max-width: 200px) { /*200px aur usse kam value mein coral ho jayenga*/
+    h1{
+        background-color: coral;
+    }
+} 
+/* navbar banane mein cheez kaafi helpful hoti hai 
+agr range set krni hai to and use kr sakte hai: */
+@media (min-width:401px) and (max-width:500px) {
+    h1{
+        background-color: chocolate;
+    }
+    
+}
+
+@media (orientation: landscape) {
+    h1{
+        background-color: blanchedalmond;
+        color: black;
+    }
+    
+}

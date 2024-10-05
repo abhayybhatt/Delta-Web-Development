@@ -1,0 +1,91 @@
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    /* animation-name: fontAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: 3; kitni baar animation dikhana hai, infinite bhi rakh sakte hai using infinite keyword. */
+    /* animation-direction: normal(from-to)/reverse(to-from)/alternate(from-to then to-from)/alternate-reverse(to-from then from-to); */
+    /* animation-direction: alternate; */
+
+    /* animation-name: colorAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite; 
+    animation-direction: normal; */
+
+    /* animation-name: widthAnimate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite; 
+    animation-direction: normal; */
+
+    /* Animation shorthand: 
+    animation : myName 2s linear 3s infinite normal */
+    animation: animate 4s ease-in 0s infinite normal;
+
+
+}
+
+/* CSS Animations
+To animate CSS elements. to create an animation template:
+@keyframes myName {  -> myName ki jagah aur koisa bhi naam de sakte hai.
+from { font-size : 20px; } -> initial state
+to { font-size : 40px; } -> final state */
+/* Creating our animation template: */
+/* @keyframes fontAnimation{
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimate {
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+    }
+}
+@keyframes widthAnimate {
+    from{
+        width: 10px;
+    }
+    to{
+        width: 400px;
+    }
+    
+} agr ye sabhi properties ek saath dikhaani hai to ek template mein hi saari properties daalni padengi! */
+@keyframes animate {
+    0%{
+        font-size: 20px;
+        background-color: green;
+        width: 10px;
+    }
+    50%{
+        font-size: 40px;
+        background-color: cornflowerblue;
+        width: 400px;
+        border-radius: 20px;
+    }
+    100%{
+        font-size: 50px;
+        background-color: coral;
+        width: 350px;
+    }
+}
+/* from = 0%
+to = 100% */
+/* % in Animation:agr beech mein koi state C bhi laani ho toh, ya aur zyada states laani ho toh.
+@keyframe myName {
+0% { font-size : 20px; }
+50% { font-size : 30px; }
+100% { font-size : 40px; } */
+
