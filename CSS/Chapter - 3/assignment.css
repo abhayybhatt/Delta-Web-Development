@@ -1,0 +1,21 @@
+#box{
+    height: 150px;
+    width: 300px;
+    background-color: grey;
+    border: 5px dotted black;
+    margin: 20px 1em 40px 2em;
+    padding: 1em;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+li{
+    display: inline; /*isse li ke bullet points gayab ho gye. But why? -> Li (list items) have their display property set to “list-item” by default which
+    makes them a bulleted list item.
+    When this property is reset by you to “inline”, then the bullet points also
+    disappear. In a way, we override the default settings with our CSS. */
+}
