@@ -1,0 +1,30 @@
+h2{
+    color: orange;
+    text-align: center;
+    font-weight: 900; /*ranges from 100 to 900, 100 means lighest and 900 means boldest. normal text has 400 font-weight and bold heading tags have 700 as by default values for font-weight.*/
+    text-decoration: wavy black underline;
+    letter-spacing: 5px;/*horizontal spacing between text characters. 96 pixels = 1 inch. px is most commonly used absolute value, they are not suitable for responsive websites, as their sizes are fixed, doesn't matter if you see that from ipad or from android phone or from your pc. So, for responive websites, we use relative units like "%".*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p{
+    /*Using rgb mode(Range: 0-255) */
+    color: rgb(255, 255, 255); /*white*/
+    background-color: rgb(0, 0, 0);/*black*/
+    text-align: justify;/*aligns the text in such a manner that its equal on both left and right sides horizontally by providing the spaces in between the words.*/
+    text-decoration: double teal overline;
+    line-height: 2; /*means 2 times of normal by default line height.*/
+    font-size: 10px;
+    font-family: bursh script mt,monaco, optima, avant garde, papyrus;/*other backup font families are also given after the one that we prefer so as to ensure that we show our selected font to those browsers as well that don't support first font family.*/
+}
+
+button{
+    color: #000;/*can write hex code in this manner as well(common nikal liya three zeroes ko!)*/
+    background-color: #00ffff; /*using hexadecimal or hex mode(Range: 0-ff) */
+    text-align: end;
+    text-decoration: black line-through;
+}
+
+a{
+    text-decoration: none; /*used to remove bydefault underline from anchor tag links.*/
+}
