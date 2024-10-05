@@ -1,0 +1,40 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    text-align: center;
+    border: 3px solid black;
+    margin:20px;
+    display: inline-block;
+}
+#static{
+    /* The position CSS property sets how an element is positioned in a document. */
+    /* The top, right, bottom, and left properties determine the final location of positioned elements. */
+    background-color: yellow;
+    position: static;
+    top: 100px;
+    left: 100px;
+    /* kuch fark nhi padega kyuki static position hai. */
+}
+#relative{
+    background-color: yellow;
+    position: relative; /* in position-relative,  the offset is relative to itself based on the values of top, right, bottom, and left.*/
+    top: 100px;
+    left: 100px; /*top se aur left se khiska daala!*/
+}
+#absolute{
+    /* The element is removed from the normal document flow, and no space is created for the element in the page   layout. */
+  
+    /* It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial  containing block. */
+    background-color: yellow;
+    position: absolute; 
+    top: 100px;
+    bottom: 100px;
+}
+#fixed{ /*jab kabhi apan kuch websites pr scroll down krte hai to unke upar ke kuch options navbar ke apne saath chalte jaate hai website ke neeche tak bhi. to wo position:fixed ki help se hi hota hai!*/
+    /* in other words, we use it for designing navigation bars in our webpage. */
+    background-color: yellow;
+    position: fixed; 
+    top: 100px;
+    bottom: 100px;
+}

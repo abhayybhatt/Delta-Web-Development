@@ -1,0 +1,32 @@
+#bg{
+    width: 300px;
+    height: 200px;
+    background-color: #7aa874;
+    margin: 10px auto;
+    background-image: url("bgimage.jpg");
+    /* bs ise use krne se kaam nhi hoga! usko apne dabbe ke hisaab se set bhi krna padenga. using background-size. */
+    /* background-size: contain| cover| auto; contain mein  repeat ho jayegi wo image us box ko bharne ke liye, na crop hogi na hi scale hogi. cover mein  crop ho jayegi,  scale nhi hogi aur auto mein to stretch ho jayegi apni photo!(bekar). by default auto rhega. best to contain hi hai. Nhi to fir mostly cases mein cover use krenge. */
+    background-size: contain;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 18px black;
+    transition: 1s;
+}
+.description{
+    padding: 0 2px 0 2px;
+}
+
+img{
+    width: 100%;
+    border: 5px 5px 0 0;
+}
+.card:hover{
+    box-shadow: 0 4px 30px black;
+}

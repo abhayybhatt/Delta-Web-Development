@@ -1,0 +1,27 @@
+div{
+    height: 100px;
+    width: 100px;
+    /* Alpha Channel: Sets the opacity for a color. Ranges from 0 to 1 */
+    background-color: rgba(255, 0, 0, 0.633); /*more aplha channel value means more visibility*/
+    /* hex code mein last mein 00-ff ke beech mein se koi si bhi value dal jayegi for alpha channel. */
+    /* Opacity: element ki hi visibility set kr deta hai! Range: 0 to 1 */
+    /* CSS transition: Transitions enable you to define the transition between two states of an element. */
+    /* transition: 1s; */
+    /* transition-duration and transiton both are same. */
+    /* transiton shorthand: property name| duration| timing-function| delay */
+    /* transition-delay: 1s; ek second baad transition hoga. */
+    margin-top: 10px;
+    /* Trick: agr kisi element ko center mein daalna hai to uski trick margin: 0 auto; */
+    margin: 0 auto;
+    transition: margin-top 1s ease-in 0.2s; /* kisi element pr agr girne ka effect lagana ho to*/
+    /* in a way, we can say that in order to create animations, we can use transitions. */
+}
+#opacity{
+    background-color: #ffa511;
+    opacity: 0.5;
+}
+div:hover{
+    /* background-color: black;
+    border-radius: 50%; */
+    margin-top: 400px;
+}
