@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Level 3</title>
+</head>
+<body>
+    <form action="/action"><!--Action matlab kaha bhejna hai jo data collect kr liya form ne, after submission.-->
+        <div>
+            <label for="username">Username : </label>
+            <input type="text" id="username" placeholder="Enter Username" name="username">
+        </div>
+        <div>
+            <label for="password">Password : </label><!--classical approach of label-->
+        <!--id and for value should be same to bind them.-->
+        <input type="password" id="password" placeholder="Enter password"><!--it means this label(for) is being used for this attribute(id)-->
+        </div>
+        <div>
+            <label for="age">Enter Age : </label>
+            <input type="number" id="age" placeholder="Enter Age">
+        </div>
+        Time
+        <input type="time">
+        <br>
+        Color
+        <input type="color">
+        <br>
+        Checkbox
+        <input type="checkbox">
+        <br>
+        Radio
+        <input type="radio">
+        Date
+        <input type="date">
+        <br>
+        File
+        <input type="file">
+        <br>
+        Range
+        <input type="range">
+        <button>Submit</button><!--if button is inside form, information will be submitted to /action-->
+        <button type="button">button type</button><!--explcitly changed button type from submit to button.-->
+        <button type="reset">reset</button><!--resets the data entered in the form.-->
+        <!--not generally advised to create a button using input element, use button element instead.-->
+        <input type="submit"><!--automatically creates submit and shows Submit on the button, made using input element.-->
+        <input type="button" value="click here">
+    </form>
+    <hr>
+    <form action="https://www.youtube.com/results"> <!--Input text ka data is url mein jayenga! Now yk how action works!-->
+        <input type="text" placeholder="search in youtube" name="search_query">
+        <button>search</button>
+        <br>
+        <label for="feedback">Please give your valuable feedback:</label>
+        <textarea name="feedback" id="feedback" cols="10" rows="5" placeholder="Write your feedback here"></textarea>
+        <!--default values for rows and columns are 10 and 30 respectively.-->
+        <button>submit</button>
+    </form>
+    
+
+
+</body>
+</html>

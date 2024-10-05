@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu using select and option along with range</title>
+</head>
+<body>
+    <form action="/server">
+        Choose your profession:
+        <select name="profession" id="profession">
+            <option>Select your option</option><!--isse yeh pehle se hi dikhega drop down menu mein-->
+            <option value="stud" selected>Student</option><!--selected se pehle se hi Student option selected rahenga.-->
+            <option value="dev">Developer</option>
+        </select>
+        <br>
+        <label for="vol">Select your volume level:</label>
+        <input type="range" name="vol" id="vol" min="0" max="100" step="10" value="70"><!--step attribute se volume will everytime increase by 10,
+             as in this case step="10" use hua hai isliye.Aur pehle se hi range 70 pr set hogi using value="70" se.-->
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
