@@ -1,0 +1,48 @@
+div{
+    height: 150px; /*sets the content area height
+    of the element. */
+    width: 500px; /*sets the content area Width of the element*/
+    background-color: pink; /*isse bina inspect kiye pata chal rha hai ki apan ne div ke content ki height aur width resize kr di hai.*/
+    /* border: border set krne ke liye kisi element ka. border only works on the outer line area of the element. It doesn't affect content box. */
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    /* Border Sides: To control an individual side of the box */
+    /* border-left-color: green;
+    border-left-style: dashed; */
+    border-top: 5px dashed blue;
+    /* border-radius:Used to round the corners of an element's outer border edge */
+    border-radius: 15px;
+    /* padding: border aur content ke beech mein aap kitna area bahana chahte hai? that's padding, */
+    padding-top: 20px;
+    /* margin: koise bhi 2 boxes ke beech ki space ko control krna hai to. */
+    /* margin-bottom: 25px; */
+    /* during inspection: blue color means content, green means padding and orange color means margin area. */
+    /* margin shorthand techniques -> same as 4 padding shorthand techniques */
+    margin: 20px 30px 40px 50px;
+    
+}
+h1{
+    /* border-width: 2px;
+    border-style: dashed;
+    border-color: cornflowerblue; */
+    /* border shorthand: ek hi baar mein teeno properties likh do ek line mein. Order: width|style|color. */
+    border:2px dashed cornflowerblue; /*aise hi likhna aage se! And remember the order. */
+    /* border-radius: 50%; iski help se circular border bana sakte hai, but make sure that height and width ki value same honi chahiye, for that. */
+    /* default margin value is set for heading tags. to unset them, set margin:0; */
+    margin: 0;
+}
+
+button{
+    border: 2px solid black;
+    /* border-radius */
+    background-color: cornflowerblue ;
+    /* padding shorthand: padding ko bhi 4 ways mein ek saath hi likh sakte hai.  */
+    /* 1. for all four sides: padding:50px;
+    2. for top and bottom|left and right:padding: 1px 2px; 
+    3. top | left and right| bottom: padding: 1px 2px 3px;*/
+    /* 4. top| right| bottom| left (cloclwise): padding:1px 2px 3px 4px; */
+    /* out of these, first and second are commonly used. */
+    /* agr padding deni hi nhi hai, in that case use 0 value: */
+    padding: 0 25px 0 25px;
+}
