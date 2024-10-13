@@ -1,0 +1,46 @@
+{
+    "cats": {
+        "name": "cats",
+        "followers": 25000,
+        "following": 5,
+        "posts": [
+            {
+                "image": "https://unsplash.com/photos/an-orange-and-white-cat-yawns-in-the-leaves-NSN2T1SHrvU",
+                "likes": 200,
+                "comments": 17
+            },
+            {
+                "image": "https://unsplash.com/photos/white-cat-fVNyjet1CXY",
+                "likes": 312,
+                "comments": 19
+            },
+            {
+                "image": "https://unsplash.com/photos/orange-tabby-cat-in-brown-cardboard-box-mrTydVjg04o",
+                "likes": 1065,
+                "comments": 200
+            }
+        ]
+    },
+    "dogs": {
+        "name": "dogs",
+        "followers": 75000,
+        "follwoing": 150,
+        "posts":[
+            {
+                "image": "https://unsplash.com/photos/young-dog-playing-with-a-ball",
+                "likes": 3000,
+                "comments": 41
+            },
+            {
+                "image": "https://unsplash.com/photos/a-dog-sitting-on-the-ground-with-its-mouth-open-iP1ngIEbJh0",
+                "likes": 2500,
+                "comments": 32
+            },
+            {
+                "image": "https://unsplash.com/photos/a-small-white-dog-standing-next-to-a-tree-KnSYF3b4KcM",
+                "likes": 500,
+                "comments": 6
+            }
+        ]
+    }
+}
