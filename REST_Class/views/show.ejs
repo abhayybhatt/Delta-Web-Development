@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Post in Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>Here is your Post in detail</h2>
+    <p>Post id: <%= post.id %></p>
+    <div class="post"><!--class ismein aur h3 mein isliye de rhe hai so that same styling hamari style.css se inpr bhi apply ho jaye.-->
+        <h3 class="user">@<%= post.username %></h3>
+        <h4><%= post.content %></h4>
+    </div>
+</body>
+</html>
