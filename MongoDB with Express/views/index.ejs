@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>All Chats</h3>
+    <form action="/chats/new" method="get">
+        <button>New Chat</button>
+    </form>
+    <hr>
+    <% for(let chat of chats){ %>
+        <div class="chat">
+            <p>From: <i><%= chat.from %></i></p>
+            <div class="msg">
+                <p><%= chat.msg %></p>
+                <form action="/chats/<%= chat._id %>/edit" method="get">
+                    <button>Edit</button>
+                </form>
+                <br>
+                <form method="post" action="/chats/<%= chat._id %>?_method=delete">
+                    <button>Delete</button>
+                </form>
+            </div>
+            <p>Received By: <i><%= chat.to %></i></p>
+            <hr>
+        </div>
+        <p><%= chat.created_at.toString().split(" ")[4] %></p> <!--date form wala data type ko .toString() form mein convert kr rhe hai. Hamein sirf time print karana hai to string ka slice method use kiya, slice kiya string ko into different components on the basic of " " jo ki split method ke parameter mein diya hai, ab ye strings ek array mein store ho jaati hai. Us array mein se 5th array item hai time, usko print karana hai isliye we have used [4]-->
+        <p><%= chat.created_at.toString().split(" ").slice(0,4).join("-") %></p> <!--Date print karani hai yha to pehle ki step to follow hogi hi saath hi .slice method se starting ke 3 array items ko ek different array mein store kara lenge, aur fir unko ek saath join krke single string bana denge, har array item ke beech mein ek "-" denge, jo ki hamne join method ke parameter mein diya diya, yaani join those array items by adding a hyphen("-") in between them.-->
+        <br><br>
+    <% } %>
+</body>
+</html>
+
