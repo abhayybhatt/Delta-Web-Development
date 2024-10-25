@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));//tha ham bata rhe hai ki hamari static files jaise ki css aur js ho gyi, ye kaha se serve hone wali hai, which as in this case is public folder, jisko views ki tarah hi path.join method se specify kara hai.
+app.use(express.static(path.join(__dirname, 'public')));//yha ham bata rhe hai ki hamari static files jaise ki css aur js ho gyi, ye kaha se serve hone wali hai, which as in this case is public folder, jisko views ki tarah hi path.join method se specify kara hai.
 app.use(express.urlencoded({extended: true}));// for parsing the data from post request from req.body
 app.use(methodOverride('_method'));
 
