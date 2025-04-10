@@ -1,0 +1,19 @@
+.InfoBox {
+    text-align: center; /*isse text to center mein aa jayega pr card nhi aayega.*/
+}
+
+.CardContainer {
+    display: flex;
+    justify-content: center; /*apne card component ko div ke andar add krke CardContainer name de diya, aur usmein ye 2 styling properties add krne se ab card center mein align ho jayega. */
+}
+
+.Card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+    transform: scale(1.05); /* Increase size by 5% */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+
