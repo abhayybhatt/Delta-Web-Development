@@ -1,0 +1,6 @@
+@import "tailwindcss"; /* directive */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.box {
+    @apply bg-amber-600 text-white m-4 border-2 rounded; /* apply directive */
+}

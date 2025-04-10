@@ -1,0 +1,55 @@
+<!-- Tailwind CSS
+What is Tailwind?
+" Rapidly build modern websites without ever leaving your HTML. "
+A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
+"Utility-first" means the framework's main focus is on providing utility classes(utility classes yaani jo acche se use ho paye, jinki kuch utility ho). -->
+
+<!-- Installation: Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
+
+It's fast, flexible, and reliable — with zero-runtime. You can use it with any JavaScript framework, including React, Angular, and Vue.js. -->
+
+<!-- Similar to Bootstrap, Tailwind CSS mein kuch pre-built classes defined rehti hai, un classes ko apne attributes mein likhkr apan pre-built styling ko apne code ke andar likh sakte hai. Zyada cheezein apni css file mein na likhni pade, that's the entire point of Tailwind. Agr custom classes bhi banani hai to pehle pre-built classes ko html mein import karo, then we can apply further styling to them.  -->
+
+<!-- Agr Tailwind ke andar apan ko padding from left deni hai to we can use pl-4. For providing values, note that Tailwind mein 1 yaani 0.25rem, thus yha 4 diya hai, meaning 1rem. Thus agr 1 rem ki padding from left deni hai, all you have to do is just include this class in your Html element. -->
+
+<!-- Since it is a utility-first framework which provides utility classes, we can say that: 
+ 1. It reduces confusion : In large codebases, agr apan same ya similar class Names dete hai apni different files mein, to ho sakta hai ki wo classNames clash krte ho. Thus, agr already pre-built classes hoti hai apne pass, to pehle hi hamare liye maximum classes bani hui hoti hai jinhe apan kahi bhi use kr sakte hai.
+ 2. Reduces final Product's Bundle Size: Production bundle yaani jo bhi tailwind ke andar saara code likha hai, usse jo final files bankr aayengi, unke andar Tailwind ki saari pre-built classes nhi aati, browser tak sirf  wahi css classes pahuchengi aur unhi ka logic aur code hoga, jinko hamne use kiya hai. Thus, jo final bundle hota hai usmein sirf wahi cheezein aati hai jinhe apan use kr rhe hote hai. -->
+
+<!-- website: tailwindcss.com 
+Refer its docs for clearer and in-depth understanding. -->
+
+<!-- Waise to iske installation ke bahut saare methods hai, we'll be exploring 2 of them that are frequently used: 
+ 1. Play CDN: CDN link include krenge. Note: CDN link ke through Tailwind CSS ko use krna is good for development, but it is not good for production - jab apan browser mein console window bhi open krenge, to aisa message display hoga: The browser build of Tailwind CSS should not be used in production. To use Tailwind CSS in production, use the Tailwind CLI, Vite plugin, or PostCSS plugin: https://tailwindcss.com/docs/installation . Production yaani jab apn apne project ko deploy krenge ya fir share krenge, in that case we should use Tailwind CLI, Vite plugin, or PostCSS plugin.-->
+
+<!-- Technologies ko bas ek point tak hi apan padh sakte hai, uske baad unko aur acche se seekhne ke liye we must make their projects, tabhi mastery achieve hogi us skill mein.  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindCSS Demo</title>
+    <link rel="stylesheet" href="style.css"> <!--Using TailwindCSS via 'using vite' installation method.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="">
+      <div class="mt-20 mx-56 flex flex-wrap rounded-lg border-2 border-black dark:bg-neutral-900">
+        <div class="h-14 bg-linear-to-t from-sky-500 to-indigo-500 text-white h-24 flex justify-center items-center font-bold text-xl w-full rounded-t">News you can Trust.</div>
+        <div class="text-center mt-6 w-full">
+          <h3 class="text-lg font-semibold dark:text-neutral-300">Stay up to date with the latest!</h3>
+          <p class="dark:text-neutral-300">Subsribe to our newsletter for the latest news straight into your inbox.</p>
+          <form action="" class="flex flex-wrap">
+            <!-- <input type="text" placeholder="your@email.com" class="w-full mx-52 bg-slate-200 text-center placeholder: text-sm my-4 py-2 rounded hover:scale-105 ease-out hover:drop-shadow-lg"> -->
+            <input type="text" placeholder="your@email.com" class="w-full mx-52 bg-slate-200 text-center placeholder:text-sm my-4 py-2 rounded transition duration-300 ease-in-out hover:drop-shadow-2xl hover:scale-105">
+            <!-- <button class="bg-blue-500 w-full text-white mx-52 py-2 rounded-full hover:scale-105 ease-out hover:drop-shadow-lg">Subscribe Now</button> -->
+            <button class="bg-blue-500 w-full text-white mx-52 py-2 rounded-full transition duration-300 ease-in-out hover:bg-blue-600 hover:drop-shadow-2xl hover:scale-105">Subscribe Now</button>
+          </form>
+          <p class="my-6 text-sm dark:text-neutral-300">We value your privacy</p>
+        </div>
+      </div>
+      <button class="absolute w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-lg text-white dark:text-black font-semibold transition duration-300 ease-in-out hover:scale-105"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </body>
+</html>
